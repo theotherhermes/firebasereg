@@ -1,3 +1,3 @@
 # registrationjson
 
-registratin / json api news
+registratin / firebase
