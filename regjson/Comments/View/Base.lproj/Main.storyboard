@@ -57,7 +57,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hv0-5N-1up">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hv0-5N-1up">
                                 <rect key="frame" x="162.5" y="146" width="50" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="1" green="0.088461864200000004" blue="0.056158079059999998" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
@@ -116,24 +116,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2m-Hj-xc9">
-                                <rect key="frame" x="147" y="283" width="81" height="46"/>
+                                <rect key="frame" x="147" y="321" width="81" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="Create">
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="createButton:" destination="Ma7-Vk-L7I" eventType="touchUpInside" id="2d4-WF-4GF"/>
-                                    <segue destination="1q0-qu-DZ1" kind="show" identifier="createSegue" id="SxO-wQ-mhY"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDq-4M-p96">
-                                <rect key="frame" x="145" y="337" width="85" height="46"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="7uC-rq-ZT9"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create new account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8u-Io-o8z">
@@ -142,20 +131,39 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="re password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gQv-xK-SAm">
+                                <rect key="frame" x="16" y="283" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDq-4M-p96">
+                                <rect key="frame" x="145" y="368" width="85" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="7uC-rq-ZT9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.73406080139999996" green="0.78877126630000005" blue="0.80857351040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8Z0-yS-Q2F" firstAttribute="trailing" secondItem="c09-jB-gSv" secondAttribute="trailing" constant="16" id="2ug-46-KcB"/>
                             <constraint firstItem="n9I-rW-Edt" firstAttribute="top" secondItem="O8u-Io-o8z" secondAttribute="bottom" constant="19" id="9OK-Dt-X6W"/>
                             <constraint firstItem="c09-jB-gSv" firstAttribute="top" secondItem="n9I-rW-Edt" secondAttribute="bottom" constant="8" id="Aar-BL-a3r"/>
+                            <constraint firstItem="N2m-Hj-xc9" firstAttribute="top" secondItem="gQv-xK-SAm" secondAttribute="bottom" constant="8" id="Dzx-ay-hFd"/>
                             <constraint firstItem="8Z0-yS-Q2F" firstAttribute="trailing" secondItem="O8u-Io-o8z" secondAttribute="trailing" constant="84" id="H7B-lT-d6G"/>
                             <constraint firstItem="O8u-Io-o8z" firstAttribute="leading" secondItem="8Z0-yS-Q2F" secondAttribute="leading" constant="84" id="ISp-wD-3gi"/>
                             <constraint firstItem="8Z0-yS-Q2F" firstAttribute="trailing" secondItem="n9I-rW-Edt" secondAttribute="trailing" constant="16" id="VSA-VQ-Gsq"/>
-                            <constraint firstItem="iDq-4M-p96" firstAttribute="top" secondItem="N2m-Hj-xc9" secondAttribute="bottom" constant="8" id="aTf-Wo-BeQ"/>
+                            <constraint firstItem="8Z0-yS-Q2F" firstAttribute="trailing" secondItem="gQv-xK-SAm" secondAttribute="trailing" constant="16" id="aFV-K5-HaN"/>
                             <constraint firstItem="n9I-rW-Edt" firstAttribute="leading" secondItem="8Z0-yS-Q2F" secondAttribute="leading" constant="16" id="d37-lY-Y3a"/>
-                            <constraint firstItem="N2m-Hj-xc9" firstAttribute="top" secondItem="c09-jB-gSv" secondAttribute="bottom" constant="8" id="ih7-s6-AkE"/>
                             <constraint firstItem="iDq-4M-p96" firstAttribute="centerX" secondItem="8Z0-yS-Q2F" secondAttribute="centerX" id="kpB-IZ-8Rd"/>
+                            <constraint firstItem="gQv-xK-SAm" firstAttribute="leading" secondItem="8Z0-yS-Q2F" secondAttribute="leading" constant="16" id="rIP-X4-Fyh"/>
                             <constraint firstItem="O8u-Io-o8z" firstAttribute="top" secondItem="8Z0-yS-Q2F" secondAttribute="top" constant="139" id="rPV-LD-a3r"/>
+                            <constraint firstItem="iDq-4M-p96" firstAttribute="top" secondItem="N2m-Hj-xc9" secondAttribute="bottom" constant="1" id="s7O-I2-vOO"/>
+                            <constraint firstItem="gQv-xK-SAm" firstAttribute="top" secondItem="c09-jB-gSv" secondAttribute="bottom" constant="8" id="wYd-MG-RAB"/>
                             <constraint firstItem="c09-jB-gSv" firstAttribute="leading" secondItem="8Z0-yS-Q2F" secondAttribute="leading" constant="16" id="wjw-yH-gMI"/>
                             <constraint firstItem="N2m-Hj-xc9" firstAttribute="centerX" secondItem="8Z0-yS-Q2F" secondAttribute="centerX" id="yFS-qt-R27"/>
                         </constraints>
@@ -166,6 +174,8 @@
                         <outlet property="emailField" destination="n9I-rW-Edt" id="bGb-lB-V6n"/>
                         <outlet property="helloLabel" destination="O8u-Io-o8z" id="40a-Q4-ExV"/>
                         <outlet property="passwordField" destination="c09-jB-gSv" id="7Aw-Gh-iST"/>
+                        <outlet property="repasswordField" destination="gQv-xK-SAm" id="KWs-au-Qo9"/>
+                        <segue destination="1q0-qu-DZ1" kind="show" identifier="createSegue" id="VbP-aH-7NA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N6N-J4-Q7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -219,6 +229,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="WuD-Jf-D3I"/>
+        <segue reference="VbP-aH-7NA"/>
     </inferredMetricsTieBreakers>
 </document>
