@@ -1,3 +1,3 @@
-# registrationjson
+# registration
 
 registratin / firebase
